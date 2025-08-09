@@ -1,0 +1,50 @@
+# Node modules
+node_modules/
+
+# Build output
+.next/
+out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env*
+!.env.example
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Editor-specific files
+.vscode/
+.idea/
+*.swp
+
+# Dependency directories
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+
+# Coverage directory used by testing tools
+coverage/
+
+# Optional: if you're using TurboRepo or monorepo caching
+turbo/
+
+# Optional: if using vercel CLI and don't want to include deployment settings
+.vercel/
+
+# Optional: local next image cache
+public/images/.cache/
+
+# Optional: build artifacts from TypeScript
+*.tsbuildinfo
+
+# Optional: local SSL certs or mock certs
+*.pem
+*.key
+node_modules
