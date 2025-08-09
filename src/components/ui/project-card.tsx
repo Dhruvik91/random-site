@@ -1,16 +1,17 @@
-'use client';
+"use client";
 
-import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Project } from '@/lib/data/projects';
-import { ExternalLink, Github, Calendar, Clock, Star, Tag } from 'lucide-react';
-import Link from 'next/link';
-import { useEffect, useRef } from 'react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Project } from "@/lib/data/projects";
+import { ExternalLink, Github, Calendar, Clock, Star, Tag } from "lucide-react";
+import Link from "next/link";
+import { useEffect, useRef } from "react";
+import Image from "next/image";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   gsap.registerPlugin(ScrollTrigger);
 }
 
@@ -24,7 +25,8 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
   useEffect(() => {
     if (cardRef.current) {
-      gsap.fromTo(cardRef.current,
+      gsap.fromTo(
+        cardRef.current,
         { opacity: 0, y: 50, scale: 0.9 },
         {
           opacity: 1,
@@ -37,8 +39,8 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             trigger: cardRef.current,
             start: "top bottom-=100",
             end: "bottom top",
-            toggleActions: "play none none reverse"
-          }
+            toggleActions: "play none none reverse",
+          },
         }
       );
     }
@@ -46,43 +48,46 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
   const getStatusColor = (status: string) => {
     switch (status) {
-      case 'Completed':
-        return 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20';
-      case 'Ongoing':
-        return 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20';
-      case 'Planning':
-        return 'bg-amber-500/10 text-amber-400 border-amber-500/20';
+      case "Completed":
+        return "bg-emerald-500/10 text-emerald-400 border-emerald-500/20";
+      case "Ongoing":
+        return "bg-cyan-500/10 text-cyan-400 border-cyan-500/20";
+      case "Planning":
+        return "bg-amber-500/10 text-amber-400 border-amber-500/20";
       default:
-        return 'bg-gray-500/10 text-gray-400 border-gray-500/20';
+        return "bg-gray-500/10 text-gray-400 border-gray-500/20";
     }
   };
 
   const getCategoryColor = (category: string) => {
     switch (category) {
-      case 'Web':
-        return 'bg-blue-500/10 text-blue-400 border-blue-500/20';
-      case 'Mobile':
-        return 'bg-purple-500/10 text-purple-400 border-purple-500/20';
-      case 'Design':
-        return 'bg-pink-500/10 text-pink-400 border-pink-500/20';
-      case 'AI/ML':
-        return 'bg-cyan-500/10 text-cyan-400 border-cyan-500/20';
+      case "Web":
+        return "bg-blue-500/10 text-blue-400 border-blue-500/20";
+      case "Mobile":
+        return "bg-purple-500/10 text-purple-400 border-purple-500/20";
+      case "Design":
+        return "bg-pink-500/10 text-pink-400 border-pink-500/20";
+      case "AI/ML":
+        return "bg-cyan-500/10 text-cyan-400 border-cyan-500/20";
       default:
-        return 'bg-gray-500/10 text-gray-400 border-gray-500/20';
+        return "bg-gray-500/10 text-gray-400 border-gray-500/20";
     }
   };
 
   return (
-    <Card 
+    <Card
       ref={cardRef}
       className="organic-card glass-card border-white/[0.08] hover:border-cyan-500/20 transition-all duration-500 hover-lift group overflow-hidden h-full flex flex-col"
     >
       {/* Image Section */}
-      <div className="relative overflow-hidden organic-hero">
-        <img 
-          src={project.image} 
+      <div className="relative overflow-hidden organic-hero h-48">
+        <Image
+          src={project.image}
           alt={project.title}
-          className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-500"
+          fill
+          sizes="100vw"
+          className="object-cover group-hover:scale-105 transition-transform duration-500"
+          unoptimized
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
         {/* Featured Badge Overlay */}
@@ -109,11 +114,19 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
         {/* Status and Category Badges */}
         <div className="flex gap-2 mb-2">
-          <Badge className={`organic-badge ${getCategoryColor(project.category)} backdrop-blur-sm`}>
+          <Badge
+            className={`organic-badge ${getCategoryColor(
+              project.category
+            )} backdrop-blur-sm`}
+          >
             <Tag className="w-3 h-3 mr-1" />
             {project.category}
           </Badge>
-          <Badge className={`organic-badge ${getStatusColor(project.status)} backdrop-blur-sm`}>
+          <Badge
+            className={`organic-badge ${getStatusColor(
+              project.status
+            )} backdrop-blur-sm`}
+          >
             {project.status}
           </Badge>
         </div>
@@ -121,7 +134,10 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         {/* Technologies */}
         <div className="flex flex-wrap gap-2">
           {project.technologies.slice(0, 3).map((tech) => (
-            <Badge key={tech} className="organic-badge bg-gray-500/10 text-gray-400 border-gray-500/20 text-xs px-2 py-1">
+            <Badge
+              key={tech}
+              className="organic-badge bg-gray-500/10 text-gray-400 border-gray-500/20 text-xs px-2 py-1"
+            >
               {tech}
             </Badge>
           ))}
@@ -156,28 +172,36 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               View Details
             </Button>
           </Link>
-          
+
           <div className="flex gap-2">
             {project.liveUrl && (
-              <Button 
-                variant="outline" 
-                size="sm" 
+              <Button
+                variant="outline"
+                size="sm"
                 className="organic-button border-gray-700 text-gray-300 hover:bg-white/5 p-2"
                 asChild
               >
-                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <ExternalLink className="w-4 h-4" />
                 </a>
               </Button>
             )}
             {project.githubUrl && (
-              <Button 
-                variant="outline" 
-                size="sm" 
+              <Button
+                variant="outline"
+                size="sm"
                 className="organic-button border-gray-700 text-gray-300 hover:bg-white/5 p-2"
                 asChild
               >
-                <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
+                <a
+                  href={project.githubUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Github className="w-4 h-4" />
                 </a>
               </Button>

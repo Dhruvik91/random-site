@@ -3,6 +3,7 @@
 import React, { forwardRef } from "react";
 import { Biodata } from "@/lib/data/biodata";
 import SocialLinks from "./SocialLinks";
+import Image from "next/image";
 
 interface HeroProps {
   data: Biodata;
@@ -16,11 +17,13 @@ const Hero = forwardRef<HTMLDivElement, HeroProps>(({ data }, ref) => {
     >
       <div className="organic-hero glass-card border-white/[0.08] p-8 md:p-12 text-center">
         {data.personal.photo && (
-          <div className="mx-auto mb-6 w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden ring-2 ring-cyan-500/30 shadow-lg subtle-glow">
-            <img
+          <div className="mx-auto mb-6 w-28 h-28 md:w-36 md:h-36 rounded-full overflow-hidden ring-2 ring-cyan-500/30 shadow-lg subtle-glow relative">
+            <Image
               src={data.personal.photo}
               alt={data.personal.fullName}
-              className="w-full h-full object-cover"
+              fill
+              sizes="(min-width: 768px) 9rem, 7rem"
+              className="object-cover"
             />
           </div>
         )}

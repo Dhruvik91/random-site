@@ -1,3 +1,5 @@
+import ImageOne from "@/assets/image5.jpeg";
+
 export interface Address {
   line1: string;
   area: string;
@@ -68,7 +70,7 @@ export const biodata: Biodata = {
     fullName: "Dhruvik Bharatbhai Gondaliya",
     dateOfBirth: "2002-03-08",
     age: "23 years",
-    height: "5'11 ft",
+    height: "5'10 ft",
     weight: "79 kg",
     complexion: "Fair",
     bodyType: "Athletic",
@@ -81,7 +83,7 @@ export const biodata: Biodata = {
     },
     land: "6 Vigha",
     photo:
-      "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=800",
+    ImageOne?.src,
   },
   family: [
     {

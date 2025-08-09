@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -50,11 +51,14 @@ export default function ParallaxImage({
       ref={ref}
       className={`relative overflow-hidden ${roundedClass} ${heightClass} glass-card border border-white/[0.06]`}
     >
-      <img
-        ref={imgRef}
+      <Image
+        ref={imgRef as unknown as React.RefObject<HTMLImageElement>}
         src={src}
         alt="parallax"
-        className="absolute inset-0 w-full h-full object-cover select-none will-change-transform"
+        fill
+        className="object-cover select-none will-change-transform"
+        sizes="100vw"
+        unoptimized
       />
       <div className="absolute inset-0 pointer-events-none bg-gradient-to-t from-black/20 to-transparent" />
     </div>

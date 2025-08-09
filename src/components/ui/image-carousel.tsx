@@ -27,11 +27,13 @@ export function ImageCarousel({
           {images.map((src, idx) => (
             <CarouselItem key={idx} className="basis-full">
               <div className={`relative w-full ${heightClass} overflow-hidden`}>
-                {/* Using img for external URLs to avoid next/image domain config */}
-                <img
+                <Image
                   src={src}
                   alt={`slide-${idx}`}
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="100vw"
+                  className="object-cover"
+                  unoptimized
                 />
               </div>
             </CarouselItem>
