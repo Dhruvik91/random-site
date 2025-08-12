@@ -1,20 +1,53 @@
+import ImageOne from "@/assets/image1.jpeg";
+import ImageTwo from "@/assets/image2.jpeg";
+import ImageThree from "@/assets/image3.jpeg";
+import ImageFour from "@/assets/image4.jpeg";
+import ImageSix from "@/assets/image16.jpeg";
+import ImageEight from "@/assets/image8.jpeg";
+
+import FamilyImageOne from "@/assets/image17.jpeg";
+import FamilyImageTwelve from "@/assets/image28.jpeg";
+import FamilyImageTwo from "@/assets/image18.jpeg";
+import FamilyImageThree from "@/assets/image19.jpeg";
+import FamilyImageFour from "@/assets/image20.jpeg";
+import FamilyImageSeven from "@/assets/image23.jpeg";
+import FamilyImageEight from "@/assets/image24.jpeg";
+import FamilyImageNine from "@/assets/image25.jpeg";
+import FamilyImageTen from "@/assets/image26.jpeg";
+import FamilyImageEleven from "@/assets/image27.jpeg";
+
+import SketchOne from "@/assets/image11.jpeg";
+import SketchTwo from "@/assets/image12.jpeg";
+import SketchThree from "@/assets/image13.jpeg";
+import SketchFour from "@/assets/image14.jpeg";
+import SketchFive from "@/assets/image15.jpeg";
+
 export const personalPhotos: string[] = [
-  "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  "https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  "https://images.pexels.com/photos/2379005/pexels-photo-2379005.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  ImageFour?.src,
+  ImageTwo?.src,
+  ImageOne?.src,
+  ImageThree?.src,
+  ImageSix?.src,
+  ImageEight?.src,
 ];
 
 export const familyPhotos: string[] = [
-  "https://images.pexels.com/photos/532389/pexels-photo-532389.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  "https://images.pexels.com/photos/2253879/pexels-photo-2253879.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  "https://images.pexels.com/photos/1648382/pexels-photo-1648382.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  "https://images.pexels.com/photos/576466/pexels-photo-576466.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  FamilyImageEleven?.src,
+  FamilyImageTwelve?.src,
+  FamilyImageTwo?.src,
+  FamilyImageThree?.src,
+  FamilyImageEight?.src,
+  FamilyImageOne?.src,
+  FamilyImageFour?.src,
+  FamilyImageSeven?.src,
+  FamilyImageNine?.src,
+  FamilyImageTen?.src,
 ];
 
 export const sketches: string[] = [
-  "https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  "https://images.pexels.com/photos/1704120/pexels-photo-1704120.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  "https://images.pexels.com/photos/102127/pexels-photo-102127.jpeg?auto=compress&cs=tinysrgb&w=1200",
-  "https://images.pexels.com/photos/434094/pexels-photo-434094.jpeg?auto=compress&cs=tinysrgb&w=1200",
+  SketchFive?.src,
+  SketchOne?.src,
+  SketchTwo?.src,
+  SketchThree?.src,
+  SketchFour?.src,
 ];

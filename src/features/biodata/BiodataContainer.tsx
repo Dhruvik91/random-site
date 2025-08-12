@@ -11,7 +11,7 @@ import FamilySection from "./components/FamilySection";
 import EducationProfessional from "./components/EducationProfessional";
 import LifestyleSection from "./components/LifestyleSection";
 import GalleriesSection from "./components/GalleriesSection";
-import FarmImagesSection from "./components/FarmImagesSection";
+import HomeImagesSection from "./components/HomeImagesSection";
 import ContactSection from "./components/ContactSection";
 
 if (typeof window !== "undefined") {
@@ -54,7 +54,7 @@ export default function BiodataContainer() {
         <FamilySection data={biodata} />
         <LifestyleSection data={biodata} />
         <GalleriesSection />
-        <FarmImagesSection />
+        <HomeImagesSection />
         <ContactSection data={biodata} />
       </div>
     </div>

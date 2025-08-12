@@ -32,7 +32,7 @@ export function ImageCarousel({
                   alt={`slide-${idx}`}
                   fill
                   sizes="100vw"
-                  className="object-cover"
+                  className="object-contain"
                   unoptimized
                 />
               </div>

@@ -1,4 +1,8 @@
-import ImageOne from "@/assets/image5.jpeg";
+import ImageOne from "@/assets/image8.jpeg";
+import FatherImage from "@/assets/image9.jpeg";
+import MotherImage from "@/assets/motherImage.jpeg";
+import BrotherImage from "@/assets/image6.jpeg";
+import MaternalImage from "@/assets/mamaImage.jpeg";
 
 export interface Address {
   line1: string;
@@ -70,12 +74,12 @@ export const biodata: Biodata = {
     fullName: "Dhruvik Bharatbhai Gondaliya",
     dateOfBirth: "2002-03-08",
     age: "23 years",
-    height: "5'10 ft",
-    weight: "79 kg",
+    height: "5'9 ft",
+    weight: "75 kg",
     complexion: "Fair",
     bodyType: "Athletic",
     address: {
-      line1: "“Shivam”, St no:20 /11",
+      line1: "“Shivam”, St no:20/11",
       area: "Bhojrajpara",
       city: "Gondal",
       district: "Rajkot",
@@ -90,29 +94,28 @@ export const biodata: Biodata = {
       relation: "Father",
       name: "Bharatbhai Damjibhai Gondaliya",
       occupation: "Businessman",
-      photo:
-        "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=800",
+      photo:FatherImage?.src,
     },
     {
       relation: "Mother",
       name: "Sheetalben Bharatbhai Gondaliya",
       occupation: "Homemaker",
       photo:
-        "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=800",
+        MotherImage?.src,
     },
     {
       relation: "Brother",
       name: "Yash Bharatbhai Gondaliya",
       notes: "Younger Brother",
       photo:
-        "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=800",
+      BrotherImage?.src,
     },
     {
       relation: "Maternal",
       name: "Shaileshbhai Popatbhai Undhad",
       notes: "Rajkot",
       photo:
-        "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=800",
+      MaternalImage?.src,
     },
   ],
   education: {
