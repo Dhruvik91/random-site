@@ -1,9 +1,11 @@
 import ImageOne from "@/assets/image1.jpeg";
-import ImageTwo from "@/assets/image2.jpeg";
+import ImageTwo from "@/assets/image7.jpeg";
 import ImageThree from "@/assets/image3.jpeg";
 import ImageFour from "@/assets/image4.jpeg";
+import ImageFive from "@/assets/image5.jpeg";
 import ImageSix from "@/assets/image16.jpeg";
 import ImageEight from "@/assets/image8.jpeg";
+import ImageNine from "@/assets/image30.jpeg";
 
 import FamilyImageOne from "@/assets/image17.jpeg";
 import FamilyImageTwelve from "@/assets/image28.jpeg";
@@ -23,12 +25,14 @@ import SketchFour from "@/assets/image14.jpeg";
 import SketchFive from "@/assets/image15.jpeg";
 
 export const personalPhotos: string[] = [
+  ImageFive?.src,
+  ImageNine?.src,
   ImageFour?.src,
   ImageTwo?.src,
-  ImageOne?.src,
-  ImageThree?.src,
   ImageSix?.src,
+  ImageThree?.src,
   ImageEight?.src,
+  ImageOne?.src,
 ];
 
 export const familyPhotos: string[] = [

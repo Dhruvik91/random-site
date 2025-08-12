@@ -20,7 +20,7 @@ export default function FamilySection({ data }: Props) {
               key={idx}
               className="group relative overflow-hidden rounded-2xl glass-card border border-white/[0.06] hover:border-cyan-500/20 transition-all"
             >
-              {member.photo && (
+              {/* {member.photo && (
                 <div className="relative h-40 w-full overflow-hidden">
                   <Image
                     src={member.photo}
@@ -31,7 +31,7 @@ export default function FamilySection({ data }: Props) {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 </div>
-              )}
+              )} */}
               <div className="p-4">
                 <p className="text-white font-medium">
                   {member.relation}: {member.name}

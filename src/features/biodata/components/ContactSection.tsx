@@ -38,11 +38,11 @@ export default function ContactSection({ data }: Props) {
           </div>
           <SocialLinks contact={data.contact} />
         </Card>
-        <div className="organic-card glass-card border border-white/[0.08] p-2">
+        {/* <div className="organic-card glass-card border border-white/[0.08] p-2">
           <div className="w-full h-80 md:h-full">
             <LeafletMap />
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -14,15 +14,15 @@ export default function GalleriesSection() {
           <ImageCarousel images={personalPhotos} heightClass="h-64 md:h-80" />
         </Card>
 
-        <Card className="organic-card glass-card border-white/[0.08] p-6">
+        {/* <Card className="organic-card glass-card border-white/[0.08] p-6">
           <h2 className="text-2xl font-bold text-white mb-4">Family</h2>
           <ImageCarousel images={familyPhotos} heightClass="h-64 md:h-80" />
-        </Card>
+        </Card> */}
 
-        <Card className="organic-card glass-card border-white/[0.08] p-6">
+        {/* <Card className="organic-card glass-card border-white/[0.08] p-6">
           <h2 className="text-2xl font-bold text-white mb-4">Sketches</h2>
           <ImageCarousel images={sketches} heightClass="h-64 md:h-80" />
-        </Card>
+        </Card> */}
       </div>
     </section>
   );

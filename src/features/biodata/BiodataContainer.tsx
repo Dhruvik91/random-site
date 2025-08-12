@@ -54,7 +54,7 @@ export default function BiodataContainer() {
         <FamilySection data={biodata} />
         <LifestyleSection data={biodata} />
         <GalleriesSection />
-        <HomeImagesSection />
+        {/* <HomeImagesSection /> */}
         <ContactSection data={biodata} />
       </div>
     </div>
