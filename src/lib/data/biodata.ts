@@ -137,8 +137,8 @@ export const biodata: Biodata = {
     phone: "+91 709689981",
     email: "dhruvikgondaliya91@gmail.com",
     fatherPhone: "+91 9925034894",
-    linkedin: "",
-    instagram: "",
-    snapchat: "",
+    linkedin: "https://www.linkedin.com/in/dhruvik-gondaliya-143ab923b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    instagram: "https://www.instagram.com/dhruvik_gondaliya?igsh=YTIxY3dkZDlwbG5z",
+    snapchat: "https://www.snapchat.com/add/dhruvik_gon2021?share_id=4LLNEZH-Hts&locale=en-US",
   },
 };
